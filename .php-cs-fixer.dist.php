@@ -10,4 +10,5 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
     ])
     ->setFinder($finder)
+    ->setParallelConfig(new PhpCsFixer\Runner\Parallel\ParallelConfig(4, 20))
 ;
