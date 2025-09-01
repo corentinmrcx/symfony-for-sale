@@ -1,0 +1,24 @@
+grumphp:
+  fixer:
+    enabled: false
+  tasks:
+    composer: null
+    git_blacklist:
+      keywords:
+        - 'dump('
+        - 'var_dump('
+        - 'print_r('
+        - 'die('
+        - 'exit('
+        - 'exit;'
+    git_commit_message:
+      enforce_capitalized_subject: false
+      matchers:
+        type: '/^(build|ci|chore|docs|feat|fix|perf|refactor|revert|style|test)(\\([^)]+\\))?: .+/'
+    composer_script:
+      script:
+        test:yaml
+        test:twig
+    phpcsfixer:
+      config: .php-cs-fixer.dist.php
+    phpstan: ~

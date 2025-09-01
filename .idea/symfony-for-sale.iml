@@ -134,6 +134,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-cs-fixer/shim" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpstan/phpstan" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vincentlanglet/twig-cs-fixer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpro/grumphp-shim" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
