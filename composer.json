@@ -84,7 +84,47 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "start": [
+          "Composer\\Config::disableProcessTimeout",
+          "symfony serve"
+        ],
+        "test:csfixer": [
+          "php vendor/bin/php-cs-fixer fix --dry-run"
+        ],
+        "fix:csfixer": [
+          "php vendor/bin/php-cs-fixer fix"
+        ],
+        "test:phpstan": [
+          "php vendor/bin/phpstan"
+        ],
+        "test:twig": [
+          "php vendor/bin/twig-cs-fixer lint"
+        ],
+        "fix:twig": [
+          "php vendor/bin/twig-cs-fixer fix"
+        ],
+        "test:yaml": [
+          "php bin/console lint:yaml config/"
+        ],
+        "test": [
+          "@test:csfixer", "@test:phpstan", "@test:twig", "@test:yaml"
+        ],
+        "fix": [
+          "@fix:csfixer", "@fix:phpstan", "@fix:twig"
         ]
+    },
+    "scripts-descriptions": {
+      "start": "Lance le serveur de développement Symfony (désactive le timeout de processus puis exécute 'symfony serve').",
+      "test:csfixer": "Vérifie le style de code PHP (php-cs-fixer) sans appliquer de modifications (mode --dry-run).",
+      "fix:csfixer": "Corrige automatiquement le style de code PHP via php-cs-fixer.",
+      "test:phpstan": "Analyse statique du code PHP avec PHPStan.",
+      "fix:phpstan": "Génère ou régénère le baseline PHPStan (à utiliser pour recalibrer l’analyse, non pour corriger le code).",
+      "test:twig": "Vérifie la conformité des templates Twig avec twig-cs-fixer (mode lint).",
+      "fix:twig": "Corrige automatiquement le style des templates Twig.",
+      "test:yaml": "Valide la syntaxe des fichiers YAML situés dans le répertoire config/.",
+      "test": "Exécute toute la suite d’analyses (style PHP, analyse statique, lint Twig, lint YAML).",
+      "fix": "Applique les corrections automatiques disponibles (PHP CS Fixer, baseline PHPStan si choisi, et Twig CS Fixer)."
     },
     "conflict": {
         "symfony/symfony": "*"
