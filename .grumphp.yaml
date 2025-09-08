@@ -16,9 +16,9 @@ grumphp:
       matchers:
         type: '/^(build|ci|chore|docs|feat|fix|perf|refactor|revert|style|test)(\([^)]+\))?: .+/'
     composer_script:
-      script:
-        test:yaml
-        test:twig
+      scripts:
+        - test:yaml
+        - test:twig
     phpcsfixer:
       config: .php-cs-fixer.dist.php
     phpstan: ~
