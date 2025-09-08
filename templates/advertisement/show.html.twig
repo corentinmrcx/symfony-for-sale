@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ advertisement.title }}{% endblock %}
+
+{% block body %}
+    <h1>{{ advertisement.title }}</h1>
+    <p>Date de création: {{ advertisement.createdAt|date('d/m/Y H:i') }}</p>
+    <p>Description: {{ advertisement.description }}</p>
+{% endblock %}

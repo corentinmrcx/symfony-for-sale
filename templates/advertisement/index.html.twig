@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Advertisement{% endblock %}
+
+{% block body %}
+    <h1>Liste des annonces</h1>
+    <ul>
+        {% for ad in advertisements %}
+            <li>
+                <a href="/advertisement/{{ ad.id }}">{{ ad.title }}</a> - {{ ad.createdAt|date('d/m/Y H:i') }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
