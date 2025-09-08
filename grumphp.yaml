@@ -14,7 +14,7 @@ grumphp:
     git_commit_message:
       enforce_capitalized_subject: false
       matchers:
-        type: '/^(build|ci|chore|docs|feat|fix|perf|refactor|revert|style|test)(\\([^)]+\\))?: .+/'
+        type: '/^(build|ci|chore|docs|feat|fix|perf|refactor|revert|style|test)(\([^)]+\))?: .+/'
     composer_script:
       script:
         test:yaml
