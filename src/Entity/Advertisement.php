@@ -6,6 +6,7 @@ use App\Repository\AdvertisementRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: AdvertisementRepository::class)]
 class Advertisement
@@ -30,9 +31,11 @@ class Advertisement
     private ?int $price = null;
 
     #[ORM\Column]
+    #[Gedmo\Timestampable(on: 'create')]
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(nullable: true)]
+    #[Gedmo\Timestampable(on: 'change', field: ['title', 'description', 'price', 'location'], value: true)]
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(length: 100)]
