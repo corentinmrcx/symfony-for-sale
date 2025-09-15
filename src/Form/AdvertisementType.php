@@ -6,16 +6,19 @@ use App\Entity\Advertisement;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 class AdvertisementType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', 'string', ['attr' => ['minlength' => 10, 'maxlength' => 100]])
-            ->add('description', 'string', ['attr' => ['minlength' => 20, 'maxlength' => 1000]])
-            ->add('price', 'float', ['attr' => ['min' => 0]])
-            ->add('location', 'string', ['attr' => ['minlength' => 2, 'maxlength' => 100]])
+            ->add('title', TextType::class, ['attr' => ['minlength' => 10, 'maxlength' => 100]])
+            ->add('description', TextType::class, ['attr' => ['minlength' => 20, 'maxlength' => 1000]])
+            ->add('price', NumberType::class, ['attr' => ['min' => 0]])
+            ->add('location', TextType::class, ['attr' => ['minlength' => 2, 'maxlength' => 100]])
         ;
     }
 

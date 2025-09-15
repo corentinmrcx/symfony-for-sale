@@ -3,14 +3,22 @@
 {% block title %}Advertisement{% endblock %}
 
 {% block body %}
+    <a href="{{ path('app_advertisement_new') }}">
+        <button type="button" class="btn btn-primary">Ajouter</button>
+    </a>
     <div class="list-group pt-5">
         {% for ad in advertisements %}
-            <a href="/advertisement/{{ ad.id }}" class="list-group-item list-group-item-action" aria-current="true">
+            <a href="{{ path('app_advertisement_show', {id: ad.id}) }}" class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ ad.title }}</h5>
                     <small>{{ ad.createdAt|date('d/m/Y H:i') }}</small>
                 </div>
-                <p class="mb-1">{{ ad.description|length > 100 ? ad.description|slice(0, 100) ~ '...' : ad.description }}</p>
+                <p class="mb-1">
+                    {{ ad.description|length > 100 ? ad.description|slice(0, 100) ~ '...' : ad.description }}
+                </p>
+                <a href="{{ path('app_advertisement_edit', {id: ad.id}) }}">
+                    <button type="button" class="btn btn-secondary btn-sm">Modifier</button>
+                </a>
             </a>
         {% endfor %}
     </div>
