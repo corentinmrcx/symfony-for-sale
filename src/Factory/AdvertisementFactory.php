@@ -3,16 +3,13 @@
 namespace App\Factory;
 
 use App\Entity\Advertisement;
-use App\Repository\AdvertisementRepository;
-use Doctrine\ORM\EntityRepository;
 use Zenstruck\Foundry\Persistence\PersistentProxyObjectFactory;
-use Zenstruck\Foundry\Persistence\Proxy;
-use Zenstruck\Foundry\Persistence\ProxyRepositoryDecorator;
 
 /**
  * @extends PersistentProxyObjectFactory<Advertisement>
  */
-final class AdvertisementFactory extends PersistentProxyObjectFactory{
+final class AdvertisementFactory extends PersistentProxyObjectFactory
+{
     /**
      * @see https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#factories-as-services
      *
@@ -27,12 +24,13 @@ final class AdvertisementFactory extends PersistentProxyObjectFactory{
         return Advertisement::class;
     }
 
-        /**
+    /**
      * @see https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#model-factories
      *
      * @todo add your default values here
      */
-    protected function defaults(): array|callable {
+    protected function defaults(): array|callable
+    {
         return [
             'title' => self::faker()->text(100),
             'description' => self::faker()->text(500),
@@ -44,7 +42,7 @@ final class AdvertisementFactory extends PersistentProxyObjectFactory{
         ];
     }
 
-        /**
+    /**
      * @see https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#initialization
      */
     protected function initialize(): static

@@ -2,11 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Advertisement;
+use App\Repository\AdvertisementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use App\Entity\Advertisement;
-use App\Repository\AdvertisementRepository;
 
 final class AdvertisementController extends AbstractController
 {

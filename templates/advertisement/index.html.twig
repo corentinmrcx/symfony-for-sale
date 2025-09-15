@@ -3,12 +3,15 @@
 {% block title %}Advertisement{% endblock %}
 
 {% block body %}
-    <h1>Liste des annonces</h1>
-    <ul>
+    <div class="list-group pt-5">
         {% for ad in advertisements %}
-            <li>
-                <a href="/advertisement/{{ ad.id }}">{{ ad.title }}</a> - {{ ad.createdAt|date('d/m/Y H:i') }}
-            </li>
+            <a href="/advertisement/{{ ad.id }}" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ ad.title }}</h5>
+                    <small>{{ ad.createdAt|date('d/m/Y H:i') }}</small>
+                </div>
+                <p class="mb-1">{{ ad.description|length > 100 ? ad.description|slice(0, 100) ~ '...' : ad.description }}</p>
+            </a>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

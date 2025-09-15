@@ -2,9 +2,9 @@
 
 namespace App\DataFixtures;
 
+use App\Factory\AdvertisementFactory;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use App\Factory\AdvertisementFactory;
 
 class AdvertisementFixtures extends Fixture
 {
