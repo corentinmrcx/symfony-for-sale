@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\AdvertisementRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AdvertisementRepository::class)]
 class Advertisement
@@ -15,12 +16,17 @@ class Advertisement
     private ?int $id = null;
 
     #[ORM\Column(length: 100)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 10, max: 100)]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 20, max: 1000)]
     private ?string $description = null;
 
     #[ORM\Column]
+    #[Assert\GreaterThanOrEqual(0)]
     private ?int $price = null;
 
     #[ORM\Column]
@@ -30,6 +36,8 @@ class Advertisement
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(length: 100)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 2, max: 100)]
     private ?string $location = null;
 
     public function getId(): ?int
