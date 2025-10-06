@@ -35,7 +35,7 @@ class Advertisement
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(nullable: true)]
-    #[Gedmo\Timestampable(on: 'update')]
+    #[Gedmo\Timestampable(on: 'change', field: 'title, description, price, location')]
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(length: 100)]
