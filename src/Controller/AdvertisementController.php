@@ -69,4 +69,18 @@ final class AdvertisementController extends AbstractController
             'advertisement' => $advertisement,
         ]);
     }
+
+    #[Route('/advertisement/{id}', name: 'app_advertisement_delete', requirements: ['id' => '\d+'], methods: ['POST'])]
+    public function delete(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
+    {
+        if (!$this->isCsrfTokenValid('delete' . $advertisement->getId(), $request->request->get('_token'))) {
+            throw $this->createAccessDeniedException();
+        }
+
+        $entityManager->remove($advertisement);
+        $entityManager->flush();
+        var_dump($advertisement->getId());
+
+        return $this->redirectToRoute('app_advertisement');
+    }
 }
