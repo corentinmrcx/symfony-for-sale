@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_01_09_2025_08_03.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(advertisement): Add delete functionality for advertisements with CSRF protection">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/advertisement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/advertisement/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,11 +203,60 @@
       <option name="presentableId" value="Default" />
       <updated>1759757639573</updated>
       <workItem from="1759757641546" duration="995000" />
-      <workItem from="1759759488572" duration="4667000" />
+      <workItem from="1759759488572" duration="5026000" />
+      <workItem from="1760355351141" duration="2342000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
+      <option name="closed" value="true" />
+      <created>1759764172473</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759764172473</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(config): Add XML configuration files for migration state services">
+      <option name="closed" value="true" />
+      <created>1759764191208</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759764191208</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(config): Enable CSRF protection in framework configuration">
+      <option name="closed" value="true" />
+      <created>1759764349166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759764349166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(advertisement): Add delete button for advertisements with confirmation prompt">
+      <option name="closed" value="true" />
+      <created>1759764370726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759764370726</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(advertisement): Add delete functionality for advertisements with CSRF protection">
+      <option name="closed" value="true" />
+      <created>1759764382307</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759764382307</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(config): Add XML configuration files for migration state services" />
+    <MESSAGE value="feat(config): Enable CSRF protection in framework configuration" />
+    <MESSAGE value="feat(advertisement): Add delete button for advertisements with confirmation prompt" />
+    <MESSAGE value="feat(advertisement): Add delete functionality for advertisements with CSRF protection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(advertisement): Add delete functionality for advertisements with CSRF protection" />
   </component>
 </project>

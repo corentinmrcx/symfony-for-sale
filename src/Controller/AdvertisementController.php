@@ -23,6 +23,19 @@ final class AdvertisementController extends AbstractController
         ]);
     }
 
+    #[Route('/advertisement/{id}', name: 'app_advertisement_delete', requirements: ['id' => '\d+'], methods: ['POST'])]
+    public function delete(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
+    {
+        if (!$this->isCsrfTokenValid('delete' . $advertisement->getId(), $request->request->get('_token'))) {
+            throw $this->createAccessDeniedException();
+        }
+
+        $entityManager->remove($advertisement);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_advertisement');
+    }
+
     #[Route('/advertisement/{id}', name: 'app_advertisement_show', requirements: ['id' => '\d+'])]
     public function show(Advertisement $advertisement): Response
     {
@@ -68,19 +81,5 @@ final class AdvertisementController extends AbstractController
             'form' => $form,
             'advertisement' => $advertisement,
         ]);
-    }
-
-    #[Route('/advertisement/{id}', name: 'app_advertisement_delete', requirements: ['id' => '\d+'], methods: ['POST'])]
-    public function delete(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
-    {
-        if (!$this->isCsrfTokenValid('delete' . $advertisement->getId(), $request->request->get('_token'))) {
-            throw $this->createAccessDeniedException();
-        }
-
-        $entityManager->remove($advertisement);
-        $entityManager->flush();
-        var_dump($advertisement->getId());
-
-        return $this->redirectToRoute('app_advertisement');
     }
 }
