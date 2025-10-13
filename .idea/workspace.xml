@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(category): Establish relationship between Advertisement and Category entities">
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(migration): Create category table and update advertisement table with category_id">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Advertissement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/AdvertisementFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/AdvertisementFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AdvertissementRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +186,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -217,7 +219,7 @@
       <updated>1759757639573</updated>
       <workItem from="1759757641546" duration="995000" />
       <workItem from="1759759488572" duration="5026000" />
-      <workItem from="1760355351141" duration="7908000" />
+      <workItem from="1760355351141" duration="10259000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -283,11 +285,54 @@
       <option name="project" value="LOCAL" />
       <updated>1760358843081</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix(category): Removing an entity error">
+      <option name="closed" value="true" />
+      <created>1760364509296</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364509296</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(category): Add category data and factory for fixtures">
+      <option name="closed" value="true" />
+      <created>1760364540181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364540181</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(advertisement): Link advertisements to categories in fixtures">
+      <option name="closed" value="true" />
+      <created>1760364546300</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364546300</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(migration): Create category table and update advertisement table with category_id">
+      <option name="closed" value="true" />
+      <created>1760364666942</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364666942</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(config): Add XML configuration files for migration state services" />
@@ -297,6 +342,14 @@
     <MESSAGE value="feat(advertisement): Implement delete functionality for advertisements with CSRF validation and add edit button" />
     <MESSAGE value="feat(category): Add Category entity and repository" />
     <MESSAGE value="feat(category): Establish relationship between Advertisement and Category entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(category): Establish relationship between Advertisement and Category entities" />
+    <MESSAGE value="fix(category): Removing an entity error" />
+    <MESSAGE value="feat(category): Add category data and factory for fixtures" />
+    <MESSAGE value="feat(advertisement): Link advertisements to categories in fixtures" />
+    <MESSAGE value="feat(migration): Create category table and update advertisement table with category_id" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(migration): Create category table and update advertisement table with category_id" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
