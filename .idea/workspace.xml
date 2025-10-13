@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(category): Add Category entity and repository">
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(category): Establish relationship between Advertisement and Category entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advertisement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Advertissement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factory/AdvertisementFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/AdvertisementFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AdvertissementRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,22 +174,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/working/marc0237/symfony-for-sale/src/DataFixtures",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DataFixtures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/DataFixtures/data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -205,7 +217,7 @@
       <updated>1759757639573</updated>
       <workItem from="1759757641546" duration="995000" />
       <workItem from="1759759488572" duration="5026000" />
-      <workItem from="1760355351141" duration="3281000" />
+      <workItem from="1760355351141" duration="7908000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -263,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760358024745</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat(category): Establish relationship between Advertisement and Category entities">
+      <option name="closed" value="true" />
+      <created>1760358843081</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760358843081</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +296,7 @@
     <MESSAGE value="feat(advertisement): Add delete functionality for advertisements with CSRF protection" />
     <MESSAGE value="feat(advertisement): Implement delete functionality for advertisements with CSRF validation and add edit button" />
     <MESSAGE value="feat(category): Add Category entity and repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(category): Add Category entity and repository" />
+    <MESSAGE value="feat(category): Establish relationship between Advertisement and Category entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(category): Establish relationship between Advertisement and Category entities" />
   </component>
 </project>

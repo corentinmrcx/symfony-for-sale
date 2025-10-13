@@ -39,6 +39,7 @@ final class AdvertisementFactory extends PersistentProxyObjectFactory
             'createdAt' => \DateTimeImmutable::createFromMutable(
                 self::faker()->dateTimeBetween('-2 months', 'now')
             ),
+            'category' => CategoryFactory::random(),
         ];
     }
 
