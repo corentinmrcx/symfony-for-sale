@@ -4,9 +4,15 @@
 
 {% block body %}
     <h1>{{ advertisement.title }}</h1>
+    <p>
+        <span class="badge bg-secondary">
+            <a href="{{ path('app_category_show', {id: advertisement.category.id}) }}" class="text-white text-decoration-none">
+                {{ advertisement.category.name }}
+            </a>
+        </span>
+    </p>
     <p>Date de création: {{ advertisement.createdAt|date('d/m/Y H:i') }}</p>
     <p>Description: {{ advertisement.description }}</p>
     <a href="{{ path('app_advertisement_edit', {id: advertisement.id}) }}" class="btn btn-primary">Éditer</a>
     {{ include('advertisement/_deleteButton.html.twig', { advertisement: advertisement }) }}
 {% endblock %}
-

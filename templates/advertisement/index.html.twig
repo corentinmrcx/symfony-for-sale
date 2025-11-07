@@ -12,6 +12,7 @@
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ ad.title }}</h5>
                     <small>{{ ad.createdAt|date('d/m/Y H:i') }}</small>
+                    <span class="badge bg-secondary">{{ ad.category.name }}</span>
                 </div>
                 <p class="mb-1">
                     {{ ad.description|length > 100 ? ad.description|slice(0, 100) ~ '...' : ad.description }}
