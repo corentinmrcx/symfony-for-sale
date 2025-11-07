@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(config): Add XML configuration files for database data sources">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advertisement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Story/CategoryStory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Story/CategoryStory.php" afterDir="false" />
-    </list>
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,7 +217,7 @@
       <workItem from="1759757641546" duration="995000" />
       <workItem from="1759759488572" duration="5026000" />
       <workItem from="1760355351141" duration="12492000" />
-      <workItem from="1762499998598" duration="4805000" />
+      <workItem from="1762499998598" duration="5651000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -330,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760366768033</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment">
+      <option name="closed" value="true" />
+      <created>1762504934640</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762504934640</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +361,8 @@
     <MESSAGE value="feat(advertisement): Link advertisements to categories in fixtures" />
     <MESSAGE value="feat(migration): Create category table and update advertisement table with category_id" />
     <MESSAGE value="feat(config): Add XML configuration files for database data sources" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(config): Add XML configuration files for database data sources" />
+    <MESSAGE value="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
