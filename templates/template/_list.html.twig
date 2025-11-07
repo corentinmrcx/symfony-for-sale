@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for advertisement in advertisements %}
+            <li>{{ advertisement.title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(CategoryController): Create Category Controller">
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,6 +199,7 @@
       <recent name="$PROJECT_DIR$/src/DataFixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/template" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/DataFixtures/data" />
     </key>
@@ -217,7 +222,7 @@
       <workItem from="1759757641546" duration="995000" />
       <workItem from="1759759488572" duration="5026000" />
       <workItem from="1760355351141" duration="12492000" />
-      <workItem from="1762499998598" duration="5651000" />
+      <workItem from="1762499998598" duration="7089000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -331,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762504934640</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat(CategoryController): Create Category Controller">
+      <option name="closed" value="true" />
+      <created>1762505710923</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762505710923</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +375,8 @@
     <MESSAGE value="feat(migration): Create category table and update advertisement table with category_id" />
     <MESSAGE value="feat(config): Add XML configuration files for database data sources" />
     <MESSAGE value="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
+    <MESSAGE value="feat(CategoryController): Create Category Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(CategoryController): Create Category Controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
