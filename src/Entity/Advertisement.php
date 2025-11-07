@@ -43,7 +43,7 @@ class Advertisement
     #[Assert\Length(min: 2, max: 100)]
     private ?string $location = null;
 
-    #[ORM\ManyToOne(inversedBy: 'advertisements')]
+    #[ORM\ManyToOne(inversedBy: 'advertisements', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Category $category = null;
 

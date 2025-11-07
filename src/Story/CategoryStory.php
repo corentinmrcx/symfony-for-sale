@@ -2,31 +2,31 @@
 
 namespace App\Story;
 
+use App\Factory\CategoryFactory;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Zenstruck\Foundry\Story;
 
 final class CategoryStory extends Story
 {
-    private array $categories = [];
-
     public function __construct(
-        #[Autowire('%kernel.project_dir%/data')]
-        private string $pathData,
+        #[Autowire('%kernel.project_dir%/data/')]
+        private readonly string $dataDir,
     ) {
-        $this->categories = file($this->pathData . '/category.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     }
 
     public function build(): void
     {
-        if (!empty($this->categories)) {
-            $this->addState('category_without_advertisement', [
-                'name' => $this->categories[0],
-            ]);
+        $filePath = $this->dataDir.'category.txt';
+        if (!file_exists($filePath)) {
+            throw new \Exception('Le fichier category.txt est introuvable.');
+        }
 
-            $categoriesPool = array_slice($this->categories, 1);
-            if (!empty($categoriesPool)) {
-                $this->addPool('categories', $categoriesPool);
-            }
+        $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+        [$first] = $lines;
+        $this->addState('category_without_advertisement', CategoryFactory::createOne(['name' => trim($first)]));
+        foreach (array_slice($lines, 1) as $line) {
+            $this->addToPool('categories', CategoryFactory::createOne(['name' => trim($line)]));
         }
     }
 }
