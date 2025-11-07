@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(CategoryController): Implement category listing and detail view">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/advertisement/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/advertisement/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/template/_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/template/_list.html.twig" afterDir="false" />
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details">
+      <change beforePath="$PROJECT_DIR$/src/Form/AdvertisementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdvertisementType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/advertisement/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/advertisement/_form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +221,7 @@
       <workItem from="1759757641546" duration="995000" />
       <workItem from="1759759488572" duration="5026000" />
       <workItem from="1760355351141" duration="12492000" />
-      <workItem from="1762499998598" duration="8356000" />
+      <workItem from="1762499998598" duration="9688000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -354,7 +351,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762508334743</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat(gitignore): Add .idea directory to .gitignore">
+      <option name="closed" value="true" />
+      <created>1762509288706</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762509288706</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details">
+      <option name="closed" value="true" />
+      <created>1762509660231</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762509660231</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +400,9 @@
     <MESSAGE value="feat(advertisement): Update Advertisement entity to include cascade persist for category relationship. Refactor AdvertisementFixtures to use CategoryStory for category assignment" />
     <MESSAGE value="feat(CategoryController): Create Category Controller" />
     <MESSAGE value="feat(CategoryController): Implement category listing and detail view" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(CategoryController): Implement category listing and detail view" />
+    <MESSAGE value="feat(gitignore): Add .idea directory to .gitignore" />
+    <MESSAGE value="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

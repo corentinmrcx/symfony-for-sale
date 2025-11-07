@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Advertisement;
+use App\Entity\Category;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -19,6 +21,11 @@ class AdvertisementType extends AbstractType
             ->add('description', TextType::class, ['attr' => ['minlength' => 20, 'maxlength' => 1000]])
             ->add('price', NumberType::class, ['attr' => ['min' => 0]])
             ->add('location', TextType::class, ['attr' => ['minlength' => 2, 'maxlength' => 100]])
+            ->add('category', EntityType::class, [
+                'placeholder' => 'Choisir une catégorie',
+                'class' => Category::class,
+                'choice_label' => 'name',
+            ])
         ;
     }
 
