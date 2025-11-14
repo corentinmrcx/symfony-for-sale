@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 
 final class AdvertisementController extends AbstractController
 {
@@ -44,10 +45,11 @@ final class AdvertisementController extends AbstractController
     }
 
     #[Route('/advertisement/{id}', name: 'app_advertisement_show', requirements: ['id' => '\d+'])]
-    public function show(Advertisement $advertisement): Response
+    public function show(#[MapEntity(expr: 'repository.findWithCategory(id)')] Advertisement $advertisement): Response
     {
         return $this->render('advertisement/show.html.twig', [
             'advertisement' => $advertisement,
+            'category' => $advertisement->getCategory(),
         ]);
     }
 
@@ -72,7 +74,7 @@ final class AdvertisementController extends AbstractController
     }
 
     #[Route('/advertisement/{id}/edit', name: 'app_advertisement_edit', requirements: ['id' => '\d+'])]
-    public function edit(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, #[MapEntity(expr: 'repository.findWithCategory(id)')] Advertisement $advertisement, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(AdvertisementType::class, $advertisement);
 
