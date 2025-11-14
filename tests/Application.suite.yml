@@ -1,0 +1,10 @@
+actor: ApplicationTester
+suite_namespace: \Application
+modules:
+    enabled:
+        - Asserts
+        - Symfony:
+            part: SERVICES
+        - Doctrine2:
+            depends: Symfony
+
