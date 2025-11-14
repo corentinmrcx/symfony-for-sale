@@ -1,0 +1,22 @@
+params:
+  - .env
+  - .env.test
+
+settings:
+  bootstrap: _bootstrap.php
+  colors: true
+
+paths:
+  tests: tests
+  log: tests/_output
+  data: tests/_data
+  support: tests/_support
+  envs: tests/_envs
+
+modules:
+  config:
+    Db:
+      dsn: '%TEST_DB_DSN%'
+      user: '%TEST_DB_USER%'
+      password: '%TEST_DB_PASSWORD%'
+      dump: tests/_data/dump.sql

@@ -113,7 +113,7 @@
           "php bin/console lint:yaml config/"
         ],
         "test": [
-          "@test:csfixer", "@test:phpstan", "@test:twig", "@test:yaml"
+          "@test:csfixer", "@test:phpstan", "@test:twig", "@test:yaml", "@test:codeception"
         ],
         "fix": [
           "@fix:csfixer", "@fix:phpstan", "@fix:twig"
@@ -123,6 +123,13 @@
           "php bin/console doctrine:database:create",
           "php bin/console doctrine:migrations:migrate --no-interaction",
           "php bin/console doctrine:fixtures:load --no-interaction"
+        ],
+        "test:codeception": [
+          "rm -rf tests/Support/_generated",
+          "php bin/console doctrine:database:drop --env=test --force",
+          "php bin/console doctrine:database:create --env=test",
+          "php bin/console doctrine:schema:create --env=test",
+          "vendor/bin/codecept run"
         ]
     },
     "scripts-descriptions": {
@@ -135,7 +142,9 @@
       "fix:twig": "Corrige automatiquement le style des templates Twig.",
       "test:yaml": "Valide la syntaxe des fichiers YAML situés dans le répertoire config/.",
       "test": "Exécute toute la suite d’analyses (style PHP, analyse statique, lint Twig, lint YAML).",
-      "fix": "Applique les corrections automatiques disponibles (PHP CS Fixer, baseline PHPStan si choisi, et Twig CS Fixer)."
+      "fix": "Applique les corrections automatiques disponibles (PHP CS Fixer, baseline PHPStan si choisi, et Twig CS Fixer).",
+      "codeception": "Exécute les tests fonctionnels avec Codeception, en préparant une base de données de test propre au préalable.",
+      "db": "Réinitialise la base de données de développement : suppression, création, exécution des migrations, et chargement des fixtures."
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -147,6 +156,10 @@
         }
     },
     "require-dev": {
+    "codeception/codeception": "^5.3",
+    "codeception/module-asserts": "^3.2",
+    "codeception/module-doctrine": "^3.3",
+    "codeception/module-symfony": "^3.7",
     "doctrine/doctrine-fixtures-bundle": "^4.1",
     "php-cs-fixer/shim": "^3.86",
     "phpro/grumphp-shim": "^2.15",
