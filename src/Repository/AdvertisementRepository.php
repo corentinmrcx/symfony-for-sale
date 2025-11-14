@@ -41,11 +41,10 @@ class AdvertisementRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    public function findAllOrderedByDate(): array
+    public function queryAllOrderedByDate(): \Doctrine\ORM\Query
     {
         return $this->createQueryBuilder('a')
             ->orderBy('a.createdAt', 'DESC')
-            ->getQuery()
-            ->getResult();
+            ->getQuery();
     }
 }

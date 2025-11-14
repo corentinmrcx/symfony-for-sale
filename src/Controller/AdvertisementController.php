@@ -3,30 +3,37 @@
 namespace App\Controller;
 
 use App\Entity\Advertisement;
-use App\Repository\AdvertisementRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
 use App\Form\AdvertisementType;
+use App\Repository\AdvertisementRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
+use Symfony\Component\Routing\Attribute\Route;
 
 final class AdvertisementController extends AbstractController
 {
     #[Route('/advertisement', name: 'app_advertisement')]
-    public function index(AdvertisementRepository $advertisementRepository): Response
+    public function index(AdvertisementRepository $advertisementRepository, PaginatorInterface $paginator, #[MapQueryParameter] int $page = 1): Response
     {
-        $advertisements = $advertisementRepository->findAllOrderedByDate();
+        $query = $advertisementRepository->queryAllOrderedByDate();
+        $pagination = $paginator->paginate(
+            $query,
+            $page,
+            5
+        );
 
         return $this->render('advertisement/index.html.twig', [
-            'advertisements' => $advertisements,
+            'advertisements' => $pagination,
         ]);
     }
 
     #[Route('/advertisement/{id}', name: 'app_advertisement_delete', requirements: ['id' => '\d+'], methods: ['POST'])]
     public function delete(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
     {
-        if (!$this->isCsrfTokenValid('delete' . $advertisement->getId(), $request->request->get('_token'))) {
+        if (!$this->isCsrfTokenValid('delete'.$advertisement->getId(), $request->request->get('_token'))) {
             throw $this->createAccessDeniedException();
         }
 
