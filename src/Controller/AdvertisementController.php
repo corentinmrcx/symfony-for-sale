@@ -22,7 +22,7 @@ final class AdvertisementController extends AbstractController
         $pagination = $paginator->paginate(
             $query,
             $page,
-            5
+            15
         );
 
         return $this->render('advertisement/index.html.twig', [

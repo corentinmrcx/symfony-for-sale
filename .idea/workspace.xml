@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(advertisement): Add category selection to advertisement form">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AdvertisementRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdvertisementRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/advertisement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/advertisement/index.html.twig" afterDir="false" />
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(advertisement): Implement pagination for advertisement listing">
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +225,7 @@
       <workItem from="1759759488572" duration="5026000" />
       <workItem from="1760355351141" duration="12492000" />
       <workItem from="1762499998598" duration="9688000" />
-      <workItem from="1763104931399" duration="3262000" />
+      <workItem from="1763104931399" duration="3575000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -378,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762509660231</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat(advertisement): Implement pagination for advertisement listing">
+      <option name="closed" value="true" />
+      <created>1763108657434</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763108657434</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +414,8 @@
     <MESSAGE value="feat(CategoryController): Implement category listing and detail view" />
     <MESSAGE value="feat(gitignore): Add .idea directory to .gitignore" />
     <MESSAGE value="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(CategoryBadges): Add categories link to the navigation bar and display category name in advertisement details" />
+    <MESSAGE value="feat(advertisement): Implement pagination for advertisement listing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(advertisement): Implement pagination for advertisement listing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

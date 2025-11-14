@@ -3,12 +3,15 @@
 {% block title %}Category{% endblock %}
 
 {% block body %}
-<h1>Liste des categories</h1>
-<ul>
-    {% for category in categories %}
-        <li>
-            <a href="{{ path('app_category_show', {id: category.id}) }}">{{ category.name }}</a>
-        </li>
-    {% endfor %}
-</ul>
+    <h1>Liste des categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="{{ path('app_category_show', {id: category.id}) }}">{{ category.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="navigation">
+        {{ knp_pagination_render(categories) }}
+    </div>
 {% endblock %}

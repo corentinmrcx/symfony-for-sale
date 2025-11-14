@@ -16,11 +16,10 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
-    public function findAllAlphabetically(): array
+    public function queryAllAlphabetically(): \Doctrine\ORM\Query
     {
         return $this->createQueryBuilder('c')
             ->orderBy('c.name', 'ASC')
-            ->getQuery()
-            ->getResult();
+            ->getQuery();
     }
 }
