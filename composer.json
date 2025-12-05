@@ -51,11 +51,12 @@
   },
     "config": {
         "allow-plugins": {
-            "php-http/discovery": true,
-            "phpro/grumphp-shim": true,
-            "symfony/flex": true,
-            "symfony/runtime": true
-        },
+      "php-http/discovery": true,
+      "phpro/grumphp-shim": true,
+      "phpstan/extension-installer": true,
+      "symfony/flex": true,
+      "symfony/runtime": true
+    },
         "sort-packages": true
     },
     "autoload": {
@@ -95,12 +96,13 @@
           "symfony serve"
         ],
         "test:csfixer": [
-          "php vendor/bin/php-cs-fixer fix --dry-run"
+          "php vendor/bin/php-cs-fixer fix --dry-run --no-progress-bar"
         ],
         "fix:csfixer": [
           "php vendor/bin/php-cs-fixer fix"
         ],
         "test:phpstan": [
+          "vendor/bin/codecept build",
           "php vendor/bin/phpstan"
         ],
         "test:twig": [
@@ -163,7 +165,10 @@
     "doctrine/doctrine-fixtures-bundle": "^4.1",
     "php-cs-fixer/shim": "^3.86",
     "phpro/grumphp-shim": "^2.15",
+    "phpstan/extension-installer": "^1.4",
     "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-doctrine": "^2.0",
+    "phpstan/phpstan-symfony": "^2.0",
     "phpunit/phpunit": "^12.3",
     "symfony/browser-kit": "7.1.*",
     "symfony/css-selector": "7.1.*",
