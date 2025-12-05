@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(codeception): Add initial Codeception configuration and tests for advertisement listing">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" afterDir="false" />
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(phpstan): Add PHPStan configuration and set up extension installer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php-cs-fixer.dist.php" beforeDir="false" afterPath="$PROJECT_DIR$/.php-cs-fixer.dist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.dist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.dist.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +247,7 @@
       <workItem from="1760355351141" duration="12492000" />
       <workItem from="1762499998598" duration="9688000" />
       <workItem from="1763104931399" duration="11400000" />
-      <workItem from="1764919058215" duration="6523000" />
+      <workItem from="1764919058215" duration="8795000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -463,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764924232826</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="feat(phpstan): Add PHPStan configuration and set up extension installer">
+      <option name="closed" value="true" />
+      <created>1764925626052</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1764925626052</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +506,8 @@
     <MESSAGE value="feat(codeception): Add Codeception configuration and update test scripts" />
     <MESSAGE value="feat(codeception): Add Codeception configuration and initial application suite" />
     <MESSAGE value="feat(codeception): Add initial Codeception configuration and tests for advertisement listing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(codeception): Add initial Codeception configuration and tests for advertisement listing" />
+    <MESSAGE value="feat(phpstan): Add PHPStan configuration and set up extension installer" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(phpstan): Add PHPStan configuration and set up extension installer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
