@@ -159,7 +159,7 @@
     "codeception/codeception": "^5.3",
     "codeception/module-asserts": "^3.2",
     "codeception/module-doctrine": "^3.3",
-    "codeception/module-symfony": "^3.7",
+    "codeception/module-symfony": "^3.8",
     "doctrine/doctrine-fixtures-bundle": "^4.1",
     "php-cs-fixer/shim": "^3.86",
     "phpro/grumphp-shim": "^2.15",

@@ -2,9 +2,13 @@ actor: ApplicationTester
 suite_namespace: \Application
 modules:
     enabled:
-        - Asserts
-        - Symfony:
-            part: SERVICES
-        - Doctrine2:
-            depends: Symfony
-
+      - Asserts
+      - Symfony:
+          app_path: 'src'
+          environment: 'test'
+          kernel_class: 'App\Kernel'
+      - Doctrine:
+          depends: Symfony
+          cleanup: true
+          connection: default
+          em: default

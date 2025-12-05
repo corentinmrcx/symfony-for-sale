@@ -7,12 +7,12 @@ use App\Form\AdvertisementType;
 use App\Repository\AdvertisementRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 
 final class AdvertisementController extends AbstractController
 {

@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(codeception): Add Codeception configuration and update test scripts">
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(codeception): Add Codeception configuration and initial application suite">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-for-sale.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codeception.yml" beforeDir="false" afterPath="$PROJECT_DIR$/codeception.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdvertisementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdvertisementFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advertisement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factory/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdvertisementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdvertisementType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Story/CategoryStory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Story/CategoryStory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/advertisement/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/advertisement/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Application.suite.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Application/_bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_support/ApplicationTester.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +179,20 @@
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/codeception/lib-innerbrowser" />
+      <path value="$PROJECT_DIR$/vendor/codeception/lib-web" />
+      <path value="$PROJECT_DIR$/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/vendor/codeception/lib-asserts" />
+      <path value="$PROJECT_DIR$/vendor/codeception/module-doctrine" />
+      <path value="$PROJECT_DIR$/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/vendor/codeception/module-symfony" />
+      <path value="$PROJECT_DIR$/vendor/codeception/module-asserts" />
+      <path value="$PROJECT_DIR$/vendor/behat/gherkin" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -230,7 +260,8 @@
       <workItem from="1759759488572" duration="5026000" />
       <workItem from="1760355351141" duration="12492000" />
       <workItem from="1762499998598" duration="9688000" />
-      <workItem from="1763104931399" duration="9667000" />
+      <workItem from="1763104931399" duration="11400000" />
+      <workItem from="1764919058215" duration="5076000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -408,7 +439,31 @@
       <option name="project" value="LOCAL" />
       <updated>1763115252058</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat(codeception): Add Codeception configuration and initial application suite">
+      <option name="closed" value="true" />
+      <created>1763116879857</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763116879857</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat(codeception): Add Codeception configuration and initial application suite">
+      <option name="closed" value="true" />
+      <created>1763116894166</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1763116894166</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat(codeception): Add Codeception configuration and initial application suite">
+      <option name="closed" value="true" />
+      <created>1763116895177</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1763116895177</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +502,8 @@
     <MESSAGE value="feat(category): Implement pagination for category listing" />
     <MESSAGE value="feat(advertisement): Enhance advertisement retrieval with category data" />
     <MESSAGE value="feat(codeception): Add Codeception configuration and update test scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(codeception): Add Codeception configuration and update test scripts" />
+    <MESSAGE value="feat(codeception): Add Codeception configuration and initial application suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(codeception): Add Codeception configuration and initial application suite" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

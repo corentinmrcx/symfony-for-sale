@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7e589f683793bf5d9b49666f6b07e3f",
+    "content-hash": "8b644e75316e8238709f7926e49b2dce",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -8486,16 +8486,16 @@
         },
         {
             "name": "codeception/module-symfony",
-            "version": "3.7.1",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-symfony.git",
-                "reference": "ee7cb9cf66f90d6ce922449f45b602f2ee14e8e6"
+                "reference": "70e5e06b0de5a4e7520e303ea6bac096e1f62ea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-symfony/zipball/ee7cb9cf66f90d6ce922449f45b602f2ee14e8e6",
-                "reference": "ee7cb9cf66f90d6ce922449f45b602f2ee14e8e6",
+                "url": "https://api.github.com/repos/Codeception/module-symfony/zipball/70e5e06b0de5a4e7520e303ea6bac096e1f62ea9",
+                "reference": "70e5e06b0de5a4e7520e303ea6bac096e1f62ea9",
                 "shasum": ""
             },
             "require": {
@@ -8508,6 +8508,9 @@
                 "codeception/module-asserts": "^3.0",
                 "codeception/module-doctrine": "^3.1",
                 "doctrine/orm": "^3.5",
+                "friendsofphp/php-cs-fixer": "^3.85",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^10.0",
                 "symfony/browser-kit": "^5.4 | ^6.4 | ^7.3",
                 "symfony/cache": "^5.4 | ^6.4 | ^7.3",
                 "symfony/config": "^5.4 | ^6.4 | ^7.3",
@@ -8544,9 +8547,9 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "src/"
-                ]
+                "psr-4": {
+                    "Codeception\\": "src/Codeception/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8571,9 +8574,9 @@
             "support": {
                 "docs": "https://codeception.com/docs/modules/Symfony",
                 "issues": "https://github.com/Codeception/module-symfony/issues",
-                "source": "https://github.com/Codeception/module-symfony/tree/3.7.1"
+                "source": "https://github.com/Codeception/module-symfony/tree/3.8.0"
             },
-            "time": "2025-08-07T11:33:16+00:00"
+            "time": "2025-11-23T15:11:04+00:00"
         },
         {
             "name": "codeception/stub",
