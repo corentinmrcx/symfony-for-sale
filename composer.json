@@ -131,7 +131,8 @@
           "php bin/console doctrine:database:drop --env=test --force",
           "php bin/console doctrine:database:create --env=test",
           "php bin/console doctrine:schema:create --env=test",
-          "vendor/bin/codecept run"
+          "vendor/bin/codecept run --group available",
+          "vendor/bin/codecept run --skip-group available"
         ]
     },
     "scripts-descriptions": {

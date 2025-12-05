@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(phpstan): Add PHPStan configuration and set up extension installer">
+    <list default="true" id="6c126dc8-c710-4ff2-a9d8-d6358d411116" name="Changes" comment="feat(codeception): Add CRUD tests for advertisements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Application/AdvertisementCRUDCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Application/AdvertisementCRUDCest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Support/ApplicationTester.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Support/ApplicationTester.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +250,7 @@
       <workItem from="1760355351141" duration="12492000" />
       <workItem from="1762499998598" duration="9688000" />
       <workItem from="1763104931399" duration="11400000" />
-      <workItem from="1764919058215" duration="8795000" />
+      <workItem from="1764919058215" duration="10250000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config): Add XML configuration files for migration state services">
       <option name="closed" value="true" />
@@ -465,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764925626052</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat(codeception): Add CRUD tests for advertisements">
+      <option name="closed" value="true" />
+      <created>1764929171345</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1764929171345</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +518,8 @@
     <MESSAGE value="feat(codeception): Add Codeception configuration and initial application suite" />
     <MESSAGE value="feat(codeception): Add initial Codeception configuration and tests for advertisement listing" />
     <MESSAGE value="feat(phpstan): Add PHPStan configuration and set up extension installer" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(phpstan): Add PHPStan configuration and set up extension installer" />
+    <MESSAGE value="feat(codeception): Add CRUD tests for advertisements" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(codeception): Add CRUD tests for advertisements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace App\Tests\Application;
 
 use App\Entity\Advertisement;
@@ -39,7 +38,6 @@ final class AdvertisementCRUDCest
 
         $I->seeInRepository(Advertisement::class, ['title' => 'Titre annonce']);
     }
-
 
     public function showAdvertisementAndAttributes(ApplicationTester $I): void
     {
@@ -94,5 +92,4 @@ final class AdvertisementCRUDCest
         $I->click('Supprimer');
         $I->dontSeeInRepository(Advertisement::class, ['id' => $ad->getId()]);
     }
-
 }
