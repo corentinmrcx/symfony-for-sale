@@ -2,8 +2,7 @@ parameters:
     level: 6
     paths:
         - src
-        - tests
     tmpDir: var/phpstan
-    excludePaths:
-        - tests/Support/_generated
+    ignoreErrors:
+        - '#Method App\\Repository\\.*::.*\(\) return type with generic class Doctrine\\ORM\\Query does not specify its types: TKey, TResult#'
 

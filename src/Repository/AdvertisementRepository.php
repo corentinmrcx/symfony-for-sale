@@ -41,6 +41,9 @@ class AdvertisementRepository extends ServiceEntityRepository
     //        ;
     //    }
 
+    /**
+     * @phpstan-return \Doctrine\ORM\Query
+     */
     public function queryAllOrderedByDate(): \Doctrine\ORM\Query
     {
         return $this->createQueryBuilder('a')

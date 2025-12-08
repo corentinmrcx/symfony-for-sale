@@ -19,20 +19,20 @@ class Advertisement
     #[ORM\Column(length: 100)]
     #[Assert\NotBlank]
     #[Assert\Length(min: 10, max: 100)]
-    private ?string $title = null;
+    private string $title;
 
     #[ORM\Column(type: Types::TEXT)]
     #[Assert\NotBlank]
     #[Assert\Length(min: 20, max: 1000)]
-    private ?string $description = null;
+    private string $description;
 
     #[ORM\Column]
     #[Assert\GreaterThanOrEqual(0)]
-    private ?int $price = null;
+    private int $price;
 
     #[ORM\Column]
     #[Gedmo\Timestampable(on: 'create')]
-    private ?\DateTimeImmutable $createdAt = null;
+    private \DateTimeImmutable $createdAt;
 
     #[ORM\Column(nullable: true)]
     #[Gedmo\Timestampable(on: 'change', field: 'title, description, price, location')]
@@ -41,11 +41,11 @@ class Advertisement
     #[ORM\Column(length: 100)]
     #[Assert\NotBlank]
     #[Assert\Length(min: 2, max: 100)]
-    private ?string $location = null;
+    private string $location;
 
     #[ORM\ManyToOne(inversedBy: 'advertisements', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Category $category = null;
+    private Category $category;
 
     public function getId(): ?int
     {

@@ -16,6 +16,9 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
+    /**
+     * @phpstan-return \Doctrine\ORM\Query
+     */
     public function queryAllAlphabetically(): \Doctrine\ORM\Query
     {
         return $this->createQueryBuilder('c')
