@@ -96,7 +96,7 @@
           "symfony serve"
         ],
         "test:csfixer": [
-          "php vendor/bin/php-cs-fixer fix --dry-run --no-progress-bar"
+          "php vendor/bin/php-cs-fixer fix --dry-run --show-progress=none"
         ],
         "fix:csfixer": [
           "php vendor/bin/php-cs-fixer fix"
