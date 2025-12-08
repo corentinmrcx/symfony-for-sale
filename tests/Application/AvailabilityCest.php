@@ -24,6 +24,7 @@ final class AvailabilityCest
 
     /**
      * @group available
+     *
      * @example ["/"]
      * @example ["/advertisement"]
      * @example ["/advertisement/new"]
@@ -37,6 +38,7 @@ final class AvailabilityCest
 
     /**
      * @group available
+     *
      * @example ["/advertisement/%d"]
      * @example ["/advertisement/%d/edit"]
      */
@@ -49,6 +51,7 @@ final class AvailabilityCest
 
     /**
      * @group available
+     *
      * @example ["/category/%d"]
      */
     public function pageWithCategoryIdIsAvailable(ApplicationTester $I, \Codeception\Example $example): void
