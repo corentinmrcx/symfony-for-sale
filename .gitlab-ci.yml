@@ -1,0 +1,13 @@
+test: 
+  tags:
+    - php8.3
+    - composer
+  script: 
+    - composer install 
+    - composer test
+  artifacts:
+    when: on_failure
+    paths:
+      - tests/_output/
+    exclude:
+      - tests/_output/.gitignore
