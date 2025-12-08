@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% include 'template/_list.html.twig' with { title: category.name, advertisements: advertisements } %}
+    {{ include('template/_list.html.twig', {title: category.name, advertisements: advertisements}) }}
 {% endblock %}
