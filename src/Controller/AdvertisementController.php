@@ -17,9 +17,9 @@ use Symfony\Component\Routing\Attribute\Route;
 final class AdvertisementController extends AbstractController
 {
     #[Route('/advertisement', name: 'app_advertisement')]
-    public function index(AdvertisementRepository $advertisementRepository, PaginatorInterface $paginator, #[MapQueryParameter] int $page = 1): Response
-    {
-        $query = $advertisementRepository->queryAllOrderedByDate();
+    public function index(AdvertisementRepository $advertisementRepository, PaginatorInterface $paginator, #[MapQueryParameter] int $page = 1, #[MapQueryParameter] string $search = '',
+    ): Response {
+        $query = $advertisementRepository->queryAllOrderedByDate($search);
         $pagination = $paginator->paginate(
             $query,
             $page,
@@ -28,6 +28,7 @@ final class AdvertisementController extends AbstractController
 
         return $this->render('advertisement/index.html.twig', [
             'advertisements' => $pagination,
+            'search' => $search,
         ]);
     }
 

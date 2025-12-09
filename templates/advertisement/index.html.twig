@@ -3,6 +3,13 @@
 {% block title %}Advertisement{% endblock %}
 
 {% block body %}
+    <h1>
+        {% if search is not empty %}
+            Recherche : {{ search }}
+        {% else %}
+            Liste des annonces
+        {% endif %}
+    </h1>
     <a href="{{ path('app_advertisement_new') }}">
         <button type="button" class="btn btn-primary">Ajouter</button>
     </a>

@@ -20,4 +20,3 @@ final class HomeCest
         $I->see('Liste des annonces');
     }
 }
-

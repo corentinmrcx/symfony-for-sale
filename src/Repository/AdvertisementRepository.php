@@ -44,11 +44,16 @@ class AdvertisementRepository extends ServiceEntityRepository
     /**
      * @phpstan-return \Doctrine\ORM\Query
      */
-    public function queryAllOrderedByDate(): \Doctrine\ORM\Query
+    public function queryAllOrderedByDate(string $search = ''): \Doctrine\ORM\Query
     {
-        return $this->createQueryBuilder('a')
-            ->orderBy('a.createdAt', 'DESC')
-            ->getQuery();
+        $qb = $this->createQueryBuilder('a');
+
+        if (!empty($search)) {
+            $qb->where('LOWER(a.title) LIKE LOWER(:search) OR LOWER(a.description) LIKE LOWER(:search)')
+                ->setParameter('search', '%'.$search.'%');
+        }
+
+        return $qb->orderBy('a.createdAt', 'DESC')->getQuery();
     }
 
     public function findWithCategory(int $id): ?Advertisement

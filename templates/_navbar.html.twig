@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Liste des annonces</a>
+        <a class="navbar-brand" href="{{ path('app_home') }}">Liste des annonces</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,6 +15,10 @@
                     <a class="nav-link" href="{{ path('app_category') }}">Catégories</a>
                 </li>
             </ul>
+            <form class="d-flex ms-auto" role="search" action="{{ path('app_advertisement') }}" method="get">
+                <input class="form-control me-2" type="search" name="search" placeholder="Rechercher" aria-label="Rechercher" value="{{ app.request.query.get('search') }}">
+                <button class="btn btn-outline-success" type="submit">Rechercher</button>
+            </form>
         </div>
     </div>
 </nav>

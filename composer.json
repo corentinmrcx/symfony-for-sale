@@ -115,7 +115,7 @@
           "php bin/console lint:yaml config/"
         ],
         "test": [
-          "@test:csfixer", "@test:phpstan", "@test:twig", "@test:yaml", "@test:codeception"
+          "@fix","@test:csfixer", "@test:phpstan", "@test:twig", "@test:yaml", "@test:codeception"
         ],
         "fix": [
           "@fix:csfixer", "@fix:phpstan", "@fix:twig"
