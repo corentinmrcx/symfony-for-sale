@@ -3,7 +3,8 @@ test:
     - php8.3
     - composer
   script: 
-    - composer install 
+    - composer install
+    - php bin/console sass:build
     - composer test
   artifacts:
     when: on_failure
