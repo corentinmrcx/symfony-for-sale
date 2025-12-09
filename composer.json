@@ -135,6 +135,10 @@
           "php bin/console doctrine:schema:create --env=test",
           "vendor/bin/codecept run --group available",
           "vendor/bin/codecept run --skip-group available"
+        ],
+        "sass": [
+          "Composer\\Config::disableProcessTimeout",
+          "php bin/console sass:build --watch"
         ]
     },
     "scripts-descriptions": {
@@ -149,7 +153,8 @@
       "test": "Exécute toute la suite d’analyses (style PHP, analyse statique, lint Twig, lint YAML).",
       "fix": "Applique les corrections automatiques disponibles (PHP CS Fixer, baseline PHPStan si choisi, et Twig CS Fixer).",
       "codeception": "Exécute les tests fonctionnels avec Codeception, en préparant une base de données de test propre au préalable.",
-      "db": "Réinitialise la base de données de développement : suppression, création, exécution des migrations, et chargement des fixtures."
+      "db": "Réinitialise la base de données de développement : suppression, création, exécution des migrations, et chargement des fixtures.",
+      "sass": "Lance la compilation dynamique des fichiers Sass en mode watch."
     },
     "conflict": {
         "symfony/symfony": "*"
