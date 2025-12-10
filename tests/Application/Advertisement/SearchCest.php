@@ -31,7 +31,7 @@ final class SearchCest
 
         $I->amOnPage('/advertisement');
         $I->fillField('search', 'vélo');
-        $I->click('Rechercher');
+        $I->click('button[type="submit"][aria-label="Rechercher"]');
 
         $I->seeCurrentUrlEquals('/advertisement?search=v%C3%A9lo');
         $I->see('Recherche : vélo', 'h1');
@@ -49,7 +49,7 @@ final class SearchCest
 
         $I->amOnPage('/advertisement');
         $I->fillField('search', 'urgent');
-        $I->click('Rechercher');
+        $I->click('button[type="submit"][aria-label="Rechercher"]');
 
         $I->see('Recherche : urgent', 'h1');
         $I->see('Annonce 1');
@@ -65,7 +65,7 @@ final class SearchCest
 
         $I->amOnPage('/advertisement');
         $I->fillField('search', 'ordinateur');
-        $I->click('Rechercher');
+        $I->click('button[type="submit"][aria-label="Rechercher"]');
 
         $I->see('ORDINATEUR Portable');
         $I->see('Téléphone');
