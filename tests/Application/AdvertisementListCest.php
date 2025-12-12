@@ -6,13 +6,14 @@ namespace App\Tests\Application;
 
 use App\Factory\AdvertisementFactory;
 use App\Factory\CategoryFactory;
+use App\Factory\UserFactory;
 use Tests\Support\ApplicationTester;
 
 final class AdvertisementListCest
 {
     public function _before(ApplicationTester $I): void
     {
-        // Code here will be executed before each test.
+        UserFactory::createOne(['email' => 'test@example.com']);
     }
 
     public function listIsEmptyDisplaysCorrectly(ApplicationTester $I): void

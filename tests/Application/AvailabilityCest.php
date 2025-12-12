@@ -6,6 +6,7 @@ namespace App\Tests\Application;
 
 use App\Factory\AdvertisementFactory;
 use App\Factory\CategoryFactory;
+use App\Factory\UserFactory;
 use Tests\Support\ApplicationTester;
 
 final class AvailabilityCest
@@ -15,6 +16,7 @@ final class AvailabilityCest
 
     public function _before(ApplicationTester $I): void
     {
+        UserFactory::createOne(['email' => 'test@example.com']);
         $this->categoryId = (int) CategoryFactory::createOne(['name' => 'Test Category'])->_real()->getId();
         $this->advertisementId = (int) AdvertisementFactory::createOne([
             'title' => 'Test Advertisement',
