@@ -17,6 +17,7 @@ final class AdvertisementFactory extends PersistentProxyObjectFactory
      */
     public function __construct()
     {
+        parent::__construct();
     }
 
     public static function class(): string
@@ -42,6 +43,7 @@ final class AdvertisementFactory extends PersistentProxyObjectFactory
                 self::faker()->dateTimeBetween('-2 months', 'now')
             ),
             'category' => CategoryFactory::random(),
+            'owner' => UserFactory::random(),
         ];
     }
 

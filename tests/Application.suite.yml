@@ -12,3 +12,7 @@ modules:
           cleanup: true
           connection: default
           em: default
+      - \App\Tests\Support\Helper\BlameablePersist:
+          depends: Symfony
+      - \App\Tests\Support\Helper\EntityManagerReset:
+          depends: Symfony
