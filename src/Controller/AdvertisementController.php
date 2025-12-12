@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 final class AdvertisementController extends AbstractController
 {
@@ -55,6 +56,7 @@ final class AdvertisementController extends AbstractController
     }
 
     #[Route('/advertisement/new', name: 'app_advertisement_new')]
+    #[IsGranted('ROLE_USER')]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $advertisement = new Advertisement();

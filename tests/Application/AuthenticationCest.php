@@ -53,4 +53,11 @@ final class AuthenticationCest
         $I->click('Se connecter');
         $I->see('Identifiants invalides');
     }
+
+    public function unauthenticatedUserCannotAccessNewAdvertisementPage(ApplicationTester $I): void
+    {
+        $I->amOnPage('/advertisement/new');
+        $I->seeCurrentUrlEquals('/login');
+        $I->see('Connexion');
+    }
 }

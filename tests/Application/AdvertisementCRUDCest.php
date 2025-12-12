@@ -7,6 +7,7 @@ namespace App\Tests\Application;
 use App\Entity\Advertisement;
 use App\Factory\AdvertisementFactory;
 use App\Factory\CategoryFactory;
+use App\Factory\UserFactory;
 use Tests\Support\ApplicationTester;
 
 final class AdvertisementCRUDCest
@@ -16,10 +17,21 @@ final class AdvertisementCRUDCest
     public function _before(ApplicationTester $I): void
     {
         $this->categoryId = (int) CategoryFactory::createOne(['name' => 'Général'])->_real()->getId();
+        UserFactory::createOne([
+            'email' => 'testuser@example.com',
+            'password' => 'password123',
+            'firstname' => 'Test',
+            'lastname' => 'User',
+            'roles' => ['ROLE_USER'],
+        ]);
     }
 
     public function createAdvertisement(ApplicationTester $I): void
     {
+        $I->amOnPage('/login');
+        $I->fillField('_username', 'testuser@example.com');
+        $I->fillField('_password', 'password123');
+        $I->click('Se connecter');
         $I->amOnPage('/advertisement/new');
         $token = $I->grabValueFrom('input[name="advertisement[_token]"]');
 
