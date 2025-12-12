@@ -10,9 +10,13 @@
             Liste des annonces
         {% endif %}
     </h1>
-    <a href="{{ path('app_advertisement_new') }}">
-        <button type="button" class="btn btn-primary">Ajouter</button>
-    </a>
+
+    {% if app.user %}
+        <a href="{{ path('app_advertisement_new') }}">
+            <button type="button" class="btn btn-primary">Ajouter</button>
+        </a>
+    {% endif %}
+
     <div class="list-group pt-5">
         {% if advertisements|length == 0 %}
             <p class="text-center">Aucune annonce</p>
