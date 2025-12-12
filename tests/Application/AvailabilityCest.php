@@ -29,6 +29,8 @@ final class AvailabilityCest
      * @example ["/advertisement"]
      * @example ["/advertisement/new"]
      * @example ["/category"]
+     * @example ["/login"]
+     * @example ["/logout"]
      */
     public function pageIsAvailable(ApplicationTester $I, \Codeception\Example $example): void
     {
