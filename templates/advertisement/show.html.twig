@@ -10,6 +10,10 @@
                 {{ advertisement.category.name }}
             </a>
         </span>
+
+        <span class="badge bg-accent1">
+            {{ advertisement.owner.firstName }}
+        </span>
     </p>
     <p>Date de création: {{ advertisement.createdAt|date('d/m/Y H:i') }}</p>
     <p>Description: {{ advertisement.description }}</p>

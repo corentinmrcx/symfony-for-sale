@@ -27,13 +27,13 @@ final class UserStory extends Story
         ]);
 
         // Utilisateurs standards
-        UserFactory::createOne([
+        $this->addState('user_principal', UserFactory::createOne([
             'email' => 'user@example.com',
             'firstname' => 'User',
             'lastname' => 'Principal',
             'roles' => ['ROLE_USER'],
             'password' => 'test',
-        ]);
+        ]));
 
         UserFactory::createOne([
             'email' => 'user2@example.com',
@@ -44,8 +44,8 @@ final class UserStory extends Story
         ]);
 
         // 10 utilisateurs aléatoires
-        UserFactory::createMany(10, [
+        $this->addState('random_users', UserFactory::createMany(10, [
             'password' => 'test',
-        ]);
+        ]));
     }
 }

@@ -51,11 +51,13 @@ final class AdvertisementCRUDCest
         $I->seeInRepository(Advertisement::class, ['title' => 'Titre annonce']);
     }
 
-    public function showAdvertisementAndAttributes(ApplicationTester $I): void
+    public function showAdvertisement(ApplicationTester $I): void
     {
         $ref = AdvertisementFactory::createOne([
             'title' => 'Voiture Renault Clio',
             'description' => 'Très bon état, 120000 km',
+            'price' => 5000,
+            'location' => 'Paris',
         ]);
         $ad = $ref->_real();
         $I->amOnPage(sprintf('/advertisement/%d', $ad->getId()));

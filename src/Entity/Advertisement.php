@@ -47,6 +47,11 @@ class Advertisement
     #[ORM\JoinColumn(nullable: false)]
     private Category $category;
 
+    #[ORM\ManyToOne(inversedBy: 'advertisements')]
+    #[ORM\JoinColumn(nullable: false)]
+    #[Gedmo\Blameable(on: 'create')]
+    private User $owner;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -132,6 +137,18 @@ class Advertisement
     public function setCategory(?Category $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getOwner(): ?User
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?User $owner): static
+    {
+        $this->owner = $owner;
 
         return $this;
     }

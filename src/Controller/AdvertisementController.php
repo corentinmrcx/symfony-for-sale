@@ -65,7 +65,6 @@ final class AdvertisementController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($advertisement);
             $entityManager->flush();
 
             return $this->redirectToRoute('app_advertisement');
