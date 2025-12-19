@@ -27,17 +27,23 @@ final class CategoryController extends AbstractController
     }
 
     #[Route('/category/{id}', name: 'app_category_show')]
-    public function show(int $id, CategoryRepository $categoryRepository): Response
+    public function show(int $id, CategoryRepository $categoryRepository, PaginatorInterface $paginator, #[MapQueryParameter] int $page = 1): Response
     {
         $category = $categoryRepository->find($id);
-
         if (!$category) {
             throw $this->createNotFoundException('Category not found');
         }
 
+        $query = $category->getAdvertisements();
+        $pagination = $paginator->paginate(
+            $query,
+            $page,
+            15
+        );
+
         return $this->render('category/show.html.twig', [
             'category' => $category,
-            'advertisements' => $category->getAdvertisements(),
+            'advertisements' => $pagination,
         ]);
     }
 }
