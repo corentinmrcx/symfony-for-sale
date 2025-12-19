@@ -13,10 +13,12 @@ final class AvailabilityCest
 {
     private int $advertisementId;
     private int $categoryId;
+    private int $userId;
 
     public function _before(ApplicationTester $I): void
     {
-        UserFactory::createOne(['email' => 'test@example.com']);
+        $user = UserFactory::createOne(['email' => 'test@example.com']);
+        $this->userId = (int) $user->_real()->getId();
         $this->categoryId = (int) CategoryFactory::createOne(['name' => 'Test Category'])->_real()->getId();
         $this->advertisementId = (int) AdvertisementFactory::createOne([
             'title' => 'Test Advertisement',
@@ -61,6 +63,18 @@ final class AvailabilityCest
     public function pageWithCategoryIdIsAvailable(ApplicationTester $I, \Codeception\Example $example): void
     {
         $url = sprintf($example[0], $this->categoryId);
+        $I->amOnPage($url);
+        $I->seeResponseCodeIs(200);
+    }
+
+    /**
+     * @group available
+     *
+     * @example ["/user/%d/advertisements"]
+     */
+    public function pageWithUserIdIsAvailable(ApplicationTester $I, \Codeception\Example $example): void
+    {
+        $url = sprintf($example[0], $this->userId);
         $I->amOnPage($url);
         $I->seeResponseCodeIs(200);
     }

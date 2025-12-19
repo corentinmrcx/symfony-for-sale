@@ -14,6 +14,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_category') }}">Catégories</a>
                 </li>
+                <li class="nav-item">
+                    {% if app.user %}
+                        <a class="nav-link" href="{{ path('app_user_advertisements', {id: app.user.id}) }}">Mes annonces</a>
+                    {% endif %}
+                </li>
             </ul>
             <form class="d-flex ms-auto" role="search" action="{{ path('app_advertisement') }}" method="get">
                 <input class="form-control me-2" type="search" name="search" placeholder="Rechercher" aria-label="Rechercher" value="{{ app.request.query.get('search') }}">

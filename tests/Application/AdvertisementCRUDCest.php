@@ -60,6 +60,7 @@ final class AdvertisementCRUDCest
             'location' => 'Paris',
         ]);
         $ad = $ref->_real();
+
         $I->amOnPage(sprintf('/advertisement/%d', $ad->getId()));
         $I->see('Voiture Renault Clio');
         $I->see('Très bon état, 120000 km');

@@ -10,9 +10,8 @@
                 {{ advertisement.category.name }}
             </a>
         </span>
-
         <span class="badge bg-accent1">
-            {{ advertisement.owner.firstName }}
+            <a href="{{ path('app_user_advertisements', {id: advertisement.owner.id}) }}">{{ advertisement.owner.firstName }}</a>
         </span>
     </p>
     <p>Date de création: {{ advertisement.createdAt|date('d/m/Y H:i') }}</p>

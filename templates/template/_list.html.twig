@@ -1,13 +1,17 @@
 {% block content %}
     <h1>{{ title }}</h1>
 
-    <ul>
-        {% for advertisement in advertisements %}
-            <li>
-                <a href="{{ path('app_advertisement_show', {id: advertisement.id}) }}">{{ advertisement.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    {% if advertisements|length == 0 %}
+        <p class="text-center">Aucune annonce</p>
+    {% else %}
+        <ul>
+            {% for advertisement in advertisements %}
+                <li>
+                    <a href="{{ path('app_advertisement_show', {id: advertisement.id}) }}">{{ advertisement.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="navigation">
         {{ knp_pagination_render(advertisements) }}
     </div>

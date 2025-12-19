@@ -33,6 +33,20 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->getEntityManager()->flush();
     }
 
+    /**
+     * Obtenir les annonces d'un utilisateur triées par date.
+     */
+    public function queryUserAdvertisements(User $user): \Doctrine\ORM\Query
+    {
+        return $this->getEntityManager()->createQueryBuilder()
+            ->select('a')
+            ->from('App\Entity\Advertisement', 'a')
+            ->where('a.owner = :user')
+            ->setParameter('user', $user)
+            ->orderBy('a.createdAt', 'DESC')
+            ->getQuery();
+    }
+
     //    /**
     //     * @return User[] Returns an array of User objects
     //     */
