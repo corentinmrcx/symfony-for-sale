@@ -4,7 +4,7 @@
     {% if app.user %}
         {% set title = 'Mes annonces' %}
     {% else %}
-        {% set title = 'Annonce de' ~ user.firstname ~ ' ' ~ user.lastname %}
+        {% set title = 'Annonce de ' ~ user.firstname ~ ' ' ~ user.lastname %}
     {% endif %}
     {{ include('template/_list.html.twig', {title: title, advertisements: advertisements}) }}
 {% endblock %}
