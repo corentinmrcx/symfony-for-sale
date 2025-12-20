@@ -16,6 +16,12 @@
     </p>
     <p>Date de création: {{ advertisement.createdAt|date('d/m/Y H:i') }}</p>
     <p>Description: {{ advertisement.description }}</p>
-    <a href="{{ path('app_advertisement_edit', {id: advertisement.id}) }}" class="btn btn-primary">Éditer</a>
-    {{ include('advertisement/_deleteButton.html.twig', {advertisement: advertisement}) }}
+
+    {% if is_granted('ADVERTISEMENT_EDIT', advertisement) %}
+        <a href="{{ path('app_advertisement_edit', {id: advertisement.id}) }}" class="btn btn-primary">Éditer</a>
+    {% endif %}
+
+    {% if is_granted('ADVERTISEMENT_DELETE', advertisement) %}
+        {{ include('advertisement/_deleteButton.html.twig', {advertisement: advertisement}) }}
+    {% endif %}
 {% endblock %}

@@ -34,6 +34,7 @@ final class AdvertisementController extends AbstractController
     }
 
     #[Route('/advertisement/{id}', name: 'app_advertisement_delete', requirements: ['id' => '\d+'], methods: ['POST'])]
+    #[IsGranted('ADVERTISEMENT_DELETE', subject: 'advertisement')]
     public function delete(Request $request, Advertisement $advertisement, EntityManagerInterface $entityManager): Response
     {
         if (!$this->isCsrfTokenValid('delete'.$advertisement->getId(), $request->request->get('_token'))) {
@@ -77,6 +78,7 @@ final class AdvertisementController extends AbstractController
     }
 
     #[Route('/advertisement/{id}/edit', name: 'app_advertisement_edit', requirements: ['id' => '\d+'])]
+    #[IsGranted('ADVERTISEMENT_EDIT', subject: 'advertisement')]
     public function edit(Request $request, #[MapEntity(expr: 'repository.findWithCategory(id)')] Advertisement $advertisement, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(AdvertisementType::class, $advertisement);
