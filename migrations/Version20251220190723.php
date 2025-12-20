@@ -20,7 +20,10 @@ final class Version20251220190723 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE "user" ADD is_verified BOOLEAN NOT NULL');
+        // Ajouter la colonne avec une valeur par défaut pour les utilisateurs existants
+        $this->addSql('ALTER TABLE "user" ADD is_verified BOOLEAN DEFAULT FALSE NOT NULL');
+        // Supprimer le défaut pour les futurs ajouts
+        $this->addSql('ALTER TABLE "user" ALTER COLUMN is_verified DROP DEFAULT');
     }
 
     public function down(Schema $schema): void
